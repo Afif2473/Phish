@@ -14,7 +14,7 @@ def billing():
     return render_template('billing.html')
 
 @app.route('/alhamdulillah')
-def alhamduliah():
+def alhamdulillah():
     # Serve the thank you "alhamdulillah" page
     return render_template('alhamdulillah.html')
 
