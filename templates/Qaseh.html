@@ -192,7 +192,7 @@
 </head>
 <body>
     <header>
-        <img id="qaseh-img" src="qaseh.png" alt="Logo">
+        <img id="qaseh-img" src="{{ url_for('static', filename='Qaseh.png') }}" alt="Logo">
         <h1>Pertubuhan Kebajikan dan Perlindungan Nur Qaseh Malaysia</h1>
     </header>
 
@@ -247,19 +247,19 @@
                     <!-- Use url_for to reference images in static folder -->
                     <img src="{{ url_for('static', filename='kuihQaseh.png') }}" alt="Tajaan Kuih & Jajan">
                     <h4>Tajaan Kuih & Jajan</h4>
-                    <a href="billing.html">JOM INFAQ</a>
+                    <a href="billing">JOM INFAQ</a>
                 </div>
                 <div class="campaign">
                     <!-- Use url_for to reference images in static folder -->
                     <img src="{{ url_for('static', filename='sahur.png') }}" alt="Kempen Infaq Buka Puasa, Moreh & Sahur">
                     <h4>Kempen Infaq Buka Puasa, Moreh & Sahur</h4>
-                    <a href="billing.html">JOM INFAQ</a>
+                    <a href="billing">JOM INFAQ</a>
                 </div>
                 <div class="campaign">
                     <!-- Use url_for to reference images in static folder -->
                     <img src="{{ url_for('static', filename='dapurQaseh.png') }}" alt="Sumbangan Barang Dapur">
                     <h4>Baju Raya Aidilfitri 2024</h4>
-                    <a href="billing.html">JOM INFAQ</a>
+                    <a href="billing">JOM INFAQ</a>
                 </div>
             </div>
         </div>
