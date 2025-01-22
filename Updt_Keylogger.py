@@ -1,6 +1,5 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request
 from pyngrok import ngrok  # Requires pyngrok library
-import os
 
 app = Flask(__name__)
 
@@ -9,24 +8,10 @@ def index():
     # Serve the main congratulations page
     return render_template('Qaseh.html')
 
-# Define the path to save the billing data
-SAVE_PATH = 'billing_data.txt'
-
-@app.route('/billing', methods=['POST'])
-def process_billing():
-    # Handle the form submission (saving data, etc.)
-    cardholder = request.form.get('cardholder')
-    cardNum = request.form.get('cardNum')
-    cardexpiry = request.form.get('cardexpiry')
-    cvv = request.form.get('cvv')
-
-    # Example: Saving data to a file
-    billing_data = f"Cardholder: {cardholder}\nCard Number: {cardNum}\nCard Expiry: {cardexpiry}\nCVV: {cvv}\n\n"
-    with open('billing_data.txt', 'a') as file:
-        file.write(billing_data)
-
-    # Redirect to 'alhamdulillah' page
-    return redirect(url_for('alhamduliah'))
+@app.route('/billing')
+def billing():
+    # Serve the billing page
+    return render_template('billing.html')
 
 @app.route('/alhamduliah')
 def alhamduliah():
