@@ -13,10 +13,10 @@ def billing():
     # Serve the billing page
     return render_template('billing.html')
 
-@app.route('/alhamduliah')
+@app.route('/alhamdulillah')
 def alhamduliah():
     # Serve the thank you "alhamdulillah" page
-    return render_template('alhamduliah.html')
+    return render_template('alhamdulillah.html')
 
 @app.route('/log', methods=['POST'])
 def log_key():
