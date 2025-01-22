@@ -13,8 +13,8 @@ def billing():
     # Serve the billing page
     return render_template('billing.html')
 
-@app.route('/alhamdulillah')
-def alhamdulillah():
+@app.route('/alhamduliah')
+def alhamduliah():
     # Serve the thank you "alhamdulillah" page
     return render_template('alhamduliah.html')
 
