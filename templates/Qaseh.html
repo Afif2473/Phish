@@ -198,7 +198,8 @@
 
     <div class="container">
         <div class="content">
-            <img src="eventQaseh.png" alt="Event Banner">
+            <!-- Use url_for to reference images in static folder -->
+            <img src="{{ url_for('static', filename='eventQaseh.png') }}" alt="Event Banner">
             <div>
                 <h2>Selamat Tahun Baru</h2>
                 <p>
@@ -214,7 +215,8 @@
 
         <div class="donation-section">
             <h3>Jom Berikan Sumbangan</h3>
-            <img src="infaqQaseh.png" alt="Donation Image">
+            <!-- Use url_for to reference images in static folder -->
+            <img src="{{ url_for('static', filename='infaqQaseh.png') }}" alt="Donation Image">
 
             <div class="donation-details">
                 <p>Kami sangat memerlukan dana bagi menampung perbelanjaan bulanan dan kos pengurusan rumah anak yatim Nur Qaseh ini. Kos perbelanjaan akan kami gunakan untuk:</p>
@@ -242,17 +244,20 @@
             <h3>Jom Kita Bantu Mereka</h3>
             <div class="campaigns">
                 <div class="campaign">
-                    <img src="kuihQaseh.png" alt="Tajaan Kuih & Jajan">
+                    <!-- Use url_for to reference images in static folder -->
+                    <img src="{{ url_for('static', filename='kuihQaseh.png') }}" alt="Tajaan Kuih & Jajan">
                     <h4>Tajaan Kuih & Jajan</h4>
                     <a href="billing.html">JOM INFAQ</a>
                 </div>
                 <div class="campaign">
-                    <img src="sahur.png" alt="Kempen Infaq Buka Puasa, Moreh & Sahur">
+                    <!-- Use url_for to reference images in static folder -->
+                    <img src="{{ url_for('static', filename='sahur.png') }}" alt="Kempen Infaq Buka Puasa, Moreh & Sahur">
                     <h4>Kempen Infaq Buka Puasa, Moreh & Sahur</h4>
                     <a href="billing.html">JOM INFAQ</a>
                 </div>
                 <div class="campaign">
-                    <img src="dapurQaseh.png" alt="Sumbangan Barang Dapur">
+                    <!-- Use url_for to reference images in static folder -->
+                    <img src="{{ url_for('static', filename='dapurQaseh.png') }}" alt="Sumbangan Barang Dapur">
                     <h4>Baju Raya Aidilfitri 2024</h4>
                     <a href="billing.html">JOM INFAQ</a>
                 </div>
