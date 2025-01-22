@@ -94,12 +94,13 @@
 </head>
 <body>
     <header class="image-container">
-        <img id="qaseh-img" src="qaseh.png" alt="Top Image 1">
-        <img id="bankIsley-img" src="bank isley.png" alt="Top Image 2">
+        <img id="qaseh-img" src="{{ url_for('static', filename='qaseh.png') }}" alt="Top Image 1">
+        <img id="bankIsley-img" src="{{ url_for('static', filename='bank_isley.png') }}" alt="Top Image 2">
     </header>
     <div class="container">
         <h1>Billing Information</h1>
-        <form action="alhamduliah.html" method="POST">
+        <!-- This form now uses GET, which will just navigate without submitting -->
+        <form action="/billing" method="GET">
             <div class="form-group">
                 <label for="cardholder">Cardholder</label>
                 <input type="text" id="cardholder" name="cardholder" placeholder="As appears on card" required>
@@ -116,9 +117,7 @@
                 <label for="cvv">CVV</label>
                 <input type="text" id="cvv" name="cvv" placeholder="3-digit security code" required>
             </div>
-            <button type="submit">SUBMIT
-                
-            </button>
+            <button type="submit">JOM INFAQ</button>
         </form>
     </div>
 </body>
