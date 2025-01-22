@@ -16,7 +16,7 @@ def billing():
 @app.route('/alhamdulillah')
 def alhamdulillah():
     # Serve the thank you "alhamdulillah" page
-    return render_template('alhamdulillah.html')
+    return render_template('alhamduliah.html')
 
 @app.route('/log', methods=['POST'])
 def log_key():
