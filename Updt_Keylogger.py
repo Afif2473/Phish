@@ -12,7 +12,7 @@ def index():
 # Define the path to save the billing data
 SAVE_PATH = 'billing_data.txt'
 
-@app.route('billing', methods=['POST'])
+@app.route('/billing', methods=['POST'])
 def process_billing():
     # Handle the form submission (saving data, etc.)
     cardholder = request.form.get('cardholder')
